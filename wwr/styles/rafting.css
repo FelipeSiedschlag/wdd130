@@ -1,0 +1,69 @@
+:root {
+    --primary-color: #b0c7b2;
+    --secondary-color: #678e7f;
+    --accent1-color: rgb(7, 59, 76);
+    --accent1-color-transparency: rgb(7, 59, 76, 0.4);
+    --accent2-color: #FFC43D;
+    --accent2-color-transparency: rgb(255, 196, 61, 0.5);
+    --heading-font: "Lobster", system-ui;
+    --text-font: "Roboto", system-ui;
+}
+
+* {
+    max-width: 1200px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+p {
+    font-family: var(--text-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+.hero{
+    position: relative;
+}
+
+.hero img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 0px;
+    color: var(--accent2-color);
+    left: 300px;
+    background-color: rgb(7, 59, 76, 0.5);
+    padding: 5px 30px;
+    border-radius: 300px
+}
+
+article{
+    position: absolute;
+    background-color: var(--accent1-color-transparency);
+    color: var(--accent2-color);
+    margin: 30px;
+    left: 0;
+    top: 60px;
+}
+
+.hero article img {
+    float: right;
+    width: 200px;
+    height: auto;
+}
+
+
+footer img{
+    width: 40px;
+    height: auto;
+}
