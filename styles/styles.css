@@ -41,10 +41,6 @@ main {
     max-width: 840px;
 }
 
-main p {
-    padding-top: 20px;
-}
-
 aside {
     width: 20rem;
     margin: 1rem;
