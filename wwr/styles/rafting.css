@@ -67,3 +67,7 @@ footer img{
     width: 40px;
     height: auto;
 }
+
+footer a{
+    text-decoration: none;
+}
