@@ -33,6 +33,11 @@ nav a{
     color: #fff;
 }
 
+header, footer, .grid {
+    margin: 0 auto;
+    max-width: 840px;
+}
+
 h1 {
     color: steelblue;
     border-bottom: 1px solid var(--steelblue);
@@ -112,7 +117,3 @@ footer {
 }
 
 
-header, footer, .grid {
-    margin: 0 auto;
-    max-width: 840px;
-}
