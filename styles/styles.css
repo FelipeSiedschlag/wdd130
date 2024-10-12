@@ -82,6 +82,10 @@ aside {
     grid-row: 1/2;
 }
 
+aside p {
+    margin: 1rem;
+}
+
 aside img {
     width: 200px;
     height: auto;
