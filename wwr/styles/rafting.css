@@ -1,13 +1,15 @@
 :root {
+    --background-color: #f3f5f3;
     --primary-color: #b0c7b2;
     --secondary-color: #304a40;
-    --accent1-color: rgb(7, 59, 76);
+    --accent1-color: #073b4c;
     --accent1-color-transparency: rgb(7, 59, 76, 0.4);
-    --accent2-color: rgb(181, 243, 242);
+    --accent2-color: #b5f3f2;
     --accent2-color-transparency: rgb(181, 243, 242, 0.5);
     --accent3-color: #597d5c;
     --heading-font: "Lobster", system-ui;
     --text-font: "Roboto", system-ui;
+
 }
 
 * {
@@ -66,8 +68,10 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
     /* max-width: 1000px; */
+
     display: grid;
     margin: 1rem auto;
+    background-color: var(--background-color);
 }
 
 .hero{
@@ -108,11 +112,13 @@ article{
 .history {
     display: grid;
     grid-template-columns: auto;
+    margin: 20px;
 
 }
 
 .history h2{
     text-align: center;
+    margin: 10px;
 }
 
 .pictures {
@@ -124,6 +130,7 @@ article{
 }
 
 .pictures h2 {
+    margin-bottom: 10px;
     grid-column: 1/6;
     grid-row: 1/2 ;
     justify-content: center;
@@ -144,13 +151,18 @@ figure{
 }
 
 footer {
-    position: relative;
+    background-color: var(--primary-color);
+    /* position: relative; */
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px 15px;
+    color:var(--accent1-color)
 }
 
 footer p{
-    position: absolute;
-    top: 40%;
-    left: 40%;
+    padding-left: 120px;
 }
 
 footer img{
@@ -165,12 +177,12 @@ footer img{
     gap: 15px;
     justify-content: flex-end;
     align-items: center;
-    float: right;
 }
 
 footer a:hover{
     cursor: pointer;
     transform: translateY(-3px);
+    border-radius: 50%;
     transition-duration: 0.5s;
 }
 
@@ -178,29 +190,201 @@ footer a:hover{
 
 .grid-contact {
     display: grid;
-    grid-template-columns: 2fr auto;
-    grid-template-rows: 1fr 3fr;
-}
-
-.form {
-    grid-row: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
 }
 
 .column1 {
-    grid-column: 1/4;
+    grid-template-columns: 1/2;
 }
 
-.column2 {
-    grid-column: 4/5;
+.column2{
+    grid-template-columns: 2/3;
 }
+
+.contactinfo {
+    width: 90%;
+    height: auto;
+    background-color: #fff;
+    /* text-align: flex-start; */
+    text-align: center;
+    border-radius: 5%;
+    padding: 15px 0 15px;
+}
+
+.contactinfo h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.contactinfo h2{
+    margin: 20px;
+}
+
+.contactinfo p {
+    margin-top: 10px;
+}
+
 
 .map {
     max-width: 1fr;
+    height: auto;
+    align-content: center;
 
+}
+
+form{
+    width: 1fr;
+    height: auto;
+    grid-row: 2/4;
+    margin: 20px;
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    background-color: #eee;
+    display: grid;
+}
+
+.form-item {
+    display: grid;
+    align-items: center;
+} 
+fieldset{
+    display: grid;
+    margin: 0.2rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0.8rem;
+}
+
+legend{
+    padding: 0.5rem;
+    color: var(--accent1-color);
+    font-size: 1.8em;
+}
+
+.personaldata{
+    margin: 10px 0 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    border-radius: 5px;
+}
+input[type="email"] {
+    width: 300px;
+    border-radius: 5px;
+}
+
+label, input, button, select, textarea {
+    font-family: var(--text-font), Arial, sans-serif;
+    font-size: 15px;
+}
+
+.textarea{
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    margin: 20px;
+    width: 80%;
+}
+
+label {
+    padding-right: 14px;
+    text-align: right;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+}
+
+button{
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--accent3-color);
+    margin-top: 10px;
+  }
+  button:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  button:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+  }
+
+.employees{
+    grid-row: 2/4;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.employees h2{
+    padding: 50px 0 20px;
+    font-size: 40px;
+}
+
+.pictures_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: blue; */
+    width: 80%;
+    height: 80%;
+}
+
+figcaption {
+    font-size: 15px;
+    font-family: "Roboto";
 }
 
 .employees img{
     border-radius: 30%;
     width: 200px; height: auto;
 }
+
+
+
+
 

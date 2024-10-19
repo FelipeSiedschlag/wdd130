@@ -31,11 +31,11 @@
         <div class="contactinfo column1">
             <h1 id="contactus">Contact Us</h1>
 
-            <h2>Send us a Message</h2>
+            <h2 class="info">Send us a Message</h2>
     
-            <p>White Water Rafting</p>
-            <p>Phone: 1234-1234</p>
-            <p>Email: <a href="mailto:">wwrafting@outlook.com</a></p>
+            <p class="info">White Water Rafting</p>
+            <p class="info">Phone: 1234-1234</p>
+            <p class="info">Email: <a href="mailto:">wwrafting@outlook.com</a></p>
         </div>
 
 
@@ -43,38 +43,41 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77408.44503814398!2d-72.74148058231386!3d-7.8463839856283935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9199cd6deebfd8c7%3A0xa5884e24b7ff82a5!2sCruzeiro%20do%20Sul%2C%20AC!5e0!3m2!1spt-BR!2sbr!4v1729266492720!5m2!1spt-BR!2sbr" width="400" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="column2 employees">
+        <div class="column1 employees">
             <h2>Our staff:</h2>
-            <figure>
-                <img src="images/employee1.jpg" alt="">
-                <figcaption>Marta - River Guide</figcaption>
-            </figure>
-            <figure>
-                <img src="images/employee2.jpg" alt="">
-                <figcaption>Julia - Rafting Instructor</figcaption>
-            </figure>
-            <figure>
-                <img src="images/employee3.jpg" alt="">
-                <figcaption>Roger - Safety Manager</figcaption>
-            </figure>
+            <div class="pictures_contact">
+                <figure>
+                    <img src="images/employee1.jpg" alt="">
+                    <figcaption>Marta - River Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="">
+                    <figcaption>Julia - Rafting Instructor</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="">
+                    <figcaption>Roger - Safety Manager</figcaption>
+                </figure>
+            </div>
+            
         </div>
 
-        <form class="column1">
+        <form class="column2">
             <fieldset>
                 <legend>Contact Us</legend>
-                <div class="form-item column2">
+                <div class="personaldata">
                     <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname">  
+                    <input type="text" id="fullname" name="fullname" class="form-item">  
                 </div>
-                <div class="form-item column2">
+                <div class="personaldata">
                     <label for="useremail">Email:</label>
-                    <input type="email" id="useremail" name="useremail">    
+                    <input type="email" id="useremail" name="useremail" class="form-item">    
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Send us a message</legend>
-                <div class="form-item column1">
+                <div>
                     <input type="radio" name="purposemessage" id="purposechoice1" value="general">
                     <label for="purposemessage">General Inquiry</label>
 
@@ -84,12 +87,12 @@
                     <input type="radio" name="purposemessage" id="purposechoice3" value="suggestion">
                     <label for="purposemessage">Website Suggestion</label>
                 </div>
-                <div>
+                <div class="textarea">
                     <!-- <label for="message">Message</label> -->
-                    <textarea name="message" id="message" rows="10" placeholder=""></textarea>
+                    <textarea name="message" id="message" rows="10" cols="50" placeholder=""></textarea>
                 </div>
 
-                <div class="form-item column1">
+                <div>
                     <label for="newsletter">Please subscribe me to the monthly newsletter</label>
                     <input type="checkbox" name="newsletter" id="newsletter">
                 </div>
