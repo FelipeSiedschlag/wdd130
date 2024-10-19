@@ -5,12 +5,14 @@
     --accent1-color-transparency: rgb(7, 59, 76, 0.4);
     --accent2-color: rgb(181, 243, 242);
     --accent2-color-transparency: rgb(181, 243, 242, 0.5);
+    --accent3-color: #597d5c;
     --heading-font: "Lobster", system-ui;
     --text-font: "Roboto", system-ui;
 }
 
 * {
-    /* max-width: 1200px; */
+    max-width: 1200px;
+    margin: auto;
     justify-content: center;
 
 }
@@ -19,7 +21,7 @@ header{
     margin: 1rem auto;
     display: grid;
     grid-template-columns: 120px 1fr 2fr;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     align-items: center;
     background-color: var(--primary-color);
     justify-content: center;
@@ -50,6 +52,7 @@ header a {
 
 header a:hover{
     cursor: pointer;
+    background-color: var(--accent3-color)
 }
 
 p {
@@ -62,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     display: grid;
     margin: 1rem auto;
 }
@@ -73,15 +76,15 @@ main {
 
 .hero img{
     display: block;
-    width: 100%;
+    width: 1200px;
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
-    top: 0px;
+    top: 15px;
     color: var(--accent2-color);
-    left: 300px;
+    left: 430px;
     background-color: rgb(7, 59, 76, 0.5);
     padding: 5px 30px;
     border-radius: 300px
@@ -113,7 +116,7 @@ article{
 }
 
 .pictures {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     display: grid;
     margin: 1rem auto;
     grid-template-columns: repeat(5, 20%);
@@ -140,21 +143,29 @@ figure{
     margin: 5px
 }
 
-footer{
-    display: flex;
-    text-align: center;
+footer {
+    position: relative;
+}
+
+footer p{
+    position: absolute;
+    top: 40%;
+    left: 40%;
 }
 
 footer img{
     width: 2rem;
     height: auto;
-
 }
 
-footer a{
+.footerLinks{
     text-decoration: none;
     margin: 0.5rem;
-
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
 }
 
 footer a:hover{
@@ -162,3 +173,34 @@ footer a:hover{
     transform: translateY(-3px);
     transition-duration: 0.5s;
 }
+
+/* Contact Us */
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    grid-template-rows: 1fr 3fr;
+}
+
+.form {
+    grid-row: auto;
+}
+
+.column1 {
+    grid-column: 1/4;
+}
+
+.column2 {
+    grid-column: 4/5;
+}
+
+.map {
+    max-width: 1fr;
+
+}
+
+.employees img{
+    border-radius: 30%;
+    width: 200px; height: auto;
+}
+
