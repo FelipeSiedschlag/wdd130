@@ -1,0 +1,33 @@
+font-family: var(--text-font);
+    color: var(--background-color);
+    background-color: var(--accent3-color);
+    padding: 10px 20px;
+    border-radius: 18px;
+    text-decoration: none;
+
+    min-width: 130px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+
+    a:hover {
+        background-color: #c46c29;
+        transform: translateY(2px)
+
+        :hover:after {
+            opacity: 1;
+            right: 10px;
+          }
+
+          a:after {
+            content: "\00BB";
+            position: absolute;
+            opacity: 0;
+            font-size: 20px;
+            line-height: 55px;
+            top: 0;
+            right: -20px;
+            transition: 0.4s;
